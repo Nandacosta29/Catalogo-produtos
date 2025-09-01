@@ -1,0 +1,149 @@
+/* ===== Global ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0a0a0a; /* fundo preto */
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Títulos ===== */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #0d6efd, #00c3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  color: #0d6efd;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+/* ===== Container do Catálogo ===== */
+.catalogo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ===== Grid de Produtos ===== */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* ===== Card de Produto ===== */
+.produto-card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.produto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(13,110,253,0.6);
+}
+
+/* Imagens em destaque */
+.produto-card img {
+  width: 100%;
+  height: auto; 
+  max-height: 300px; 
+  object-fit: contain; 
+  background: #000; 
+  transition: transform 0.3s;
+}
+
+.produto-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Informações do produto */
+.produto-card .info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.produto-card h3 {
+  color: #0d6efd;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.produto-card p {
+  color: #ccc;
+  flex-grow: 1;
+}
+
+.produto-card strong {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* ===== Formulário ===== */
+form {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  background: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+form input,
+form textarea,
+form button {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #777;
+}
+
+form button {
+  background: #0d6efd;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background: #00c3ff;
+  transform: scale(1.05);
+}
